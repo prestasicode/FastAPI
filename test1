@@ -1,0 +1,57 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOm1o9W0u4yiwtHFU4HPSVT",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/prestasicode/FastAPI/blob/main/test1\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "KtuutwdKPrJR"
+      },
+      "outputs": [],
+      "source": [
+        "import requests\n",
+        "import csv\n",
+        "import time \n",
+        "\n",
+        "with open('file_xyz.csv', mode='r') as csv_file:\n",
+        "    csv_reader = csv.DictReader(csv_file)\n",
+        "    for row in csv_reader:\n",
+        "        #print(row[\"datetrx\"]+','+row[\"timetrx\"]+','+row[\"typetrx\"])\n",
+        "        url = 'url_post_response'\n",
+        "\n",
+        "        data = '''{\n",
+        "                    var()\n",
+        "                }'''\n",
+        "        print(data)\n",
+        "        time.sleep(1)\n",
+        "        response = requests.post(url, data=data)\n",
+        "        print(response.text)\n"
+      ]
+    }
+  ]
+}
